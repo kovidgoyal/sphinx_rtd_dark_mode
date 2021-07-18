@@ -38,23 +38,6 @@ then the extension will change it for you as it only works for that theme.
 Below are the options that are customizeable for the extension. Currently, there
 is only one option available to configure.
 
-#### Default Dark Mode
-
-This lets you choose which theme the user sees when they load the docs for the first
-time ever. After the first time however, this setting has no effect as the users
-preference is stored in local storage within their browser. This option accepts a
-boolean for the value. If this option is true (the default option), users will start
-in dark mode when first visiting the site. If this option is false, users will start
-in light mode when they first visit the site.
-
-```py
-# user starts in dark mode
-default_dark_mode = True
-
-# user starts in light mode
-default_dark_mode = False
-```
-
 ## License
 
 The Sphinx RTD Dark Mode module for Python is licensed under an [MIT license](https://github.com/MrDogeBro/sphinx_rtd_dark_mode/blob/master/LICENSE).

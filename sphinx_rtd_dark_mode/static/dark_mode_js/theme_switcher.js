@@ -1,3 +1,7 @@
+/*jshint esversion: 6 */
+
+(function () {
+
 const createThemeSwitcher = () => {
   let btn = document.createElement('BUTTON');
   btn.className = 'theme-switcher';
@@ -32,3 +36,20 @@ const switchTheme = () => {
     });
   }
 };
+
+const loadTheme = () => {
+  let theme = localStorage.getItem('theme');
+
+  if (theme !== null) {
+    if (theme === 'dark')
+      document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    let shade = 'light';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) shade = 'dark';
+    localStorage.setItem('theme', shade);
+    document.documentElement.setAttribute('data-theme', shade);
+  }
+};
+
+loadTheme();
+})();
